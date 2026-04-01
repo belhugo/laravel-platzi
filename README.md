@@ -1,15 +1,15 @@
 # Laravel Platzi
 
-Proyecto de aprendizaje del curso de Laravel en Platzi.
+Learning project from Platzi's Laravel course.
 
-## Tecnologías
+## Stack
 
 - Laravel 13
 - PHP 8.3
 - MariaDB
 - Vite
 
-## Instalación
+## Setup
 
 ```bash
 git clone https://github.com/tu-usuario/laravel-platzi.git
@@ -27,9 +27,9 @@ php artisan migrate
 npm run build
 ```
 
-## Desarrollo
+## Running locally
 
-Abre dos terminales:
+Open two terminals:
 
 ```bash
 # Terminal 1
@@ -39,8 +39,8 @@ php artisan serve
 npm run dev
 ```
 
-App disponible en http://localhost:8000
+App running at http://localhost:8000
 
-## Licencia
+## License
 
-Uso educativo.
+For learning purposes only.
