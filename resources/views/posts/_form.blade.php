@@ -20,6 +20,24 @@
 {{-- ✅ Envolver en div separa el espaciado del input del label --}}
 <div class="mb-4"></div>
 
+<label for="slug" class="block uppercase text-gray-500 dark:text-gray-400 text-xs font-semibold tracking-wide mb-1.5">Slug</label>
+<span class="text-xs text-red-600">@error('slug') {{ $message }} @enderror</span>
+
+<input
+    id="title" {{-- ✅ Necesario para que el label funcione --}}
+    type="text"
+    name="slug"
+    value="{{ old('slug', $post->slug) }}" {{-- ✅ old() mantiene el valor si hay error de validación --}}
+    class="w-full rounded-md border border-gray-200 dark:border-gray-700
+           bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100
+           px-3 py-2 text-sm
+           focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent
+           transition-colors"
+>
+
+{{-- ✅ Envolver en div separa el espaciado del input del label --}}
+<div class="mb-4"></div>
+
 <label for="body" class="block uppercase text-gray-500 dark:text-gray-400 text-xs font-semibold tracking-wide mb-1.5">
     Contenido
 </label>
