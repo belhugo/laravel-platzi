@@ -4,6 +4,7 @@
 <label for="title" class="block uppercase text-gray-500 dark:text-gray-400 text-xs font-semibold tracking-wide mb-1.5">
     Título
 </label>
+<span class="text-xs text-red-600">@error('title') {{ $message }} @enderror</span>
 <input
     id="title" {{-- ✅ Necesario para que el label funcione --}}
     type="text"
@@ -22,6 +23,7 @@
 <label for="body" class="block uppercase text-gray-500 dark:text-gray-400 text-xs font-semibold tracking-wide mb-1.5">
     Contenido
 </label>
+<span class="text-xs text-red-600">@error('body') {{ $message }} @enderror</span>
 <textarea
     id="body"
     name="body"
@@ -31,7 +33,7 @@
            px-3 py-2 text-sm resize-y
            focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent
            transition-colors font-sans"
->{{ trim($post->body) }}</textarea> {{-- ✅ trim() evita el espacio en blanco inicial --}}
+>{{ trim(old('body', $post->body)) }}</textarea> {{-- ✅ trim() evita el espacio en blanco inicial --}}
 
 <div class="flex justify-between items-center mt-6">
     <a href="{{ route('posts.index') }}" class="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">
